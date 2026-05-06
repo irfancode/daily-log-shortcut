@@ -1,0 +1,80 @@
+{
+  "WFWorkflowClientVersion": "1342",
+  "WFWorkflowMinimumClientVersion": "1342",
+  "WFWorkflowName": "Daily Log",
+  "WFWorkflowIcon": {
+    "WFWorkflowIconStartColor": 13,
+    "WFWorkflowIconGlyphNumber": 59393
+  },
+  "WFWorkflowActions": [
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.getdate",
+      "WFWorkflowActionParameters": {
+        "WFDateFormat": "EEEE, MMMM d, yyyy",
+        "WFRelativeDateFormat": ""
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.getnotes",
+      "WFWorkflowActionParameters": {
+        "WFFolderName": "Daily Log",
+        "WFSortOrder": "Modified",
+        "WFNoteLimit": 1
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+      "WFWorkflowActionParameters": {
+        "WFCondition": "Any",
+        "WFConditions": [
+          {
+            "WFWorkflowActionIdentifier": "is.workflow.actions.getnotes",
+            "WFWorkflowActionParameters": {}
+          }
+        ]
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.gettextfromnote",
+      "WFWorkflowActionParameters": {}
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.text",
+      "WFWorkflowActionParameters": {
+        "WFText": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🌅 MORNING\n\n[Your intentions for today]\n\n📊 YESTERDAY\n───────────────────────────────────\n[Yesterday's wins & todos will appear here]\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n📝 TONIGHT\n──────────\nWins:\n-\n\nTodos for tomorrow:\n-\n\n💭 REFLECTION\n─────────────\n\n"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.combinetext",
+      "WFWorkflowActionParameters": {
+        "WFCombineTextSeparator": "\n",
+        "WFTextArray": [
+          {
+            "WFWorkflowActionIdentifier": "is.workflow.actions.text",
+            "WFWorkflowActionParameters": {}
+          },
+          {
+            "WFWorkflowActionIdentifier": "is.workflow.actions.gettextfromnote",
+            "WFWorkflowActionParameters": {}
+          }
+        ]
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.createnote",
+      "WFWorkflowActionParameters": {
+        "WFFolderName": "Daily Log",
+        "WFNoteTitle": "${date}"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.addnote",
+      "WFWorkflowActionParameters": {}
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.openNote",
+      "WFWorkflowActionParameters": {}
+    }
+  ],
+  "WFWorkflowInputContentItemClasses": []
+}
