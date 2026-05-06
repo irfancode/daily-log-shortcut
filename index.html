@@ -239,11 +239,11 @@
         <h1>Daily Log</h1>
         <p class="tagline">One tap. Every day. Your life, searchable.</p>
         
-        <a href="shortcuts://" class="install-btn" onclick="setupShortcut()">
+        <a href="shortcuts://run-shortcut?name=Log" class="install-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
             </svg>
-            Open Shortcuts App
+            Open My Log
         </a>
         
         <p style="margin-top: 12px; color: var(--text-muted); font-size: 14px;">
@@ -287,11 +287,11 @@
         </div>
         
         <div class="setup">
-            <h2>🚀 30-Second Setup</h2>
+            <h2>🚀 3-Minute Setup</h2>
             
             <div class="step">
                 <span class="step-num">1</span>
-                <span>Open <a href="notes://">Notes app</a> → create folder <strong>"Daily Log"</strong></span>
+                <span>Open <a href="notes://">Notes</a> → tap <strong>☁️ New Folder</strong> → name: <strong>Log</strong></span>
             </div>
             
             <div class="step">
@@ -301,27 +301,38 @@
             
             <div class="step">
                 <span class="step-num">3</span>
-                <span>Tap "Search actions" → add <strong>Date</strong><br>
-                <span style="color:var(--text-muted); font-size:13px;">(set format to: MMMM d, yyyy)</span></span>
+                <span>Search & add: <strong>Text</strong><br>
+                <span style="color:var(--text-muted); font-size:13px;">Paste: 📅 Today's Log</span></span>
             </div>
-
+            
             <div class="step">
                 <span class="step-num">4</span>
                 <span>Add <strong>Create Note</strong><br>
-                <span style="color:var(--text-muted); font-size:13px;">Folder: Daily Log | Title: leave empty (it will use date)</span></span>
+                <span style="color:var(--text-muted); font-size:13px;">Folder: Log | Body: use "Text" from previous</span></span>
             </div>
             
             <div class="step">
                 <span class="step-num">5</span>
-                <span>Add <strong>Open Note</strong></span>
+                <span>Add <strong>Show Alert</strong><br>
+                <span style="color:var(--text-muted); font-size:13px;">Message: "Note created!"</span></span>
             </div>
             
             <div class="step">
                 <span class="step-num">6</span>
-                <span>Tap <strong>⋮</strong> → name it <strong>"Daily Log"</strong> → Done!</span>
+                <span>Add <strong>Open Note</strong></span>
             </div>
             
-            <p class="done-msg">✅ Now tap the button below - it should open your note!</p>
+            <div class="step">
+                <span class="step-num">7</span>
+                <span>Tap <strong>⋯</strong> → name: <strong>Log</strong> → Done!</span>
+            </div>
+            
+            <p class="done-msg">✅ Tap "Open Shortcuts" now - you should see your note!</p>
+            
+            <div style="margin-top:20px; padding:16px; background:rgba(99,102,241,0.1); border-radius:12px;">
+                <p style="font-size:14px; margin-bottom:8px;">⚠️ If nothing opens:</p>
+                <p style="font-size:13px; color:var(--text-muted);">1. Check folder "Log" exists in Notes<br>2. Check Shortcuts has permission for Notes<br>3. Tap the shortcut in Shortcuts app manually first</p>
+            </div>
         </div>
         
         <div style="margin-top:24px; padding:16px; background:#1a1a24; border-radius:12px;">
