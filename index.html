@@ -287,34 +287,47 @@
         </div>
         
         <div class="setup">
-            <h2>🚀 Quick Setup (Do Once)</h2>
+            <h2>🚀 30-Second Setup</h2>
             
             <div class="step">
                 <span class="step-num">1</span>
-                <span>Create a folder named <strong>"Daily Log"</strong> in <a href="notes://">Notes app</a> (make sure iCloud is on)</span>
+                <span>Open <a href="notes://">Notes app</a> → create folder <strong>"Daily Log"</strong></span>
             </div>
             
             <div class="step">
                 <span class="step-num">2</span>
-                <span>Open <strong>Shortcuts app</strong> → tap <strong>+</strong> to create new</span>
+                <span>Open <a href="shortcuts://">Shortcuts</a> → tap <strong>+</strong></span>
             </div>
             
             <div class="step">
                 <span class="step-num">3</span>
-                <span>Add these 3 actions in order:</span>
-                <div class="actions-list">
-                    • <strong>Date</strong> → Format: "MMMM d, yyyy"<br>
-                    • <strong>Create Note</strong> → Folder: Daily Log, Title: Date<br>
-                    • <strong>Open Note</strong>
-                </div>
+                <span>Tap "Search actions" → add <strong>Date</strong><br>
+                <span style="color:var(--text-muted); font-size:13px;">(set format to: MMMM d, yyyy)</span></span>
+            </div>
+
+            <div class="step">
+                <span class="step-num">4</span>
+                <span>Add <strong>Create Note</strong><br>
+                <span style="color:var(--text-muted); font-size:13px;">Folder: Daily Log | Title: leave empty (it will use date)</span></span>
             </div>
             
             <div class="step">
-                <span class="step-num">4</span>
-                <span>Name it <strong>"Daily Log"</strong> and tap Done!</span>
+                <span class="step-num">5</span>
+                <span>Add <strong>Open Note</strong></span>
             </div>
             
-            <p class="done-msg">✅ Done! Now tap the button above to use it!</p>
+            <div class="step">
+                <span class="step-num">6</span>
+                <span>Tap <strong>⋮</strong> → name it <strong>"Daily Log"</strong> → Done!</span>
+            </div>
+            
+            <p class="done-msg">✅ Now tap the button below - it should open your note!</p>
+        </div>
+        
+        <div style="margin-top:24px; padding:16px; background:#1a1a24; border-radius:12px;">
+            <p style="color:var(--text-muted); font-size:14px; margin-bottom:12px;">🔍 Test if it's working:</p>
+            <a href="shortcuts://run-shortcut?name=Daily%20Log" style="color:var(--accent);">Tap here to test</a>
+            <p style="color:var(--text-muted); font-size:12px; margin-top:8px;">(Should open today's note. If not, check shortcut name is exactly "Daily Log")</p>
         </div>
         
         <footer>
